@@ -1,12 +1,18 @@
-// Select and define a variable for all the path elements
+
+// Selecting the path element nested in the SVG returns a nodelist
+const path = document.querySelectorAll('.svg-path path');
+console.log(path);
+
+// Use the spread operator to convert the nodelist into an array
 const paths = [...document.querySelectorAll('.svg-path path')];
+console.log(paths);
 
 // For each path, do the following:
 paths.forEach((path) => {
 
   // Create a variable for each path's length
   const length = path.getTotalLength();
-  console.log(length);
+  // console.log(length);
 
   // The stroke-dashoffset property defines the location along an SVG path where the dash of a stroke will begin. The higher the number, the further along the path the dashes will begin.
   path.style.strokeDashoffset = length;

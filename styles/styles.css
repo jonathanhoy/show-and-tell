@@ -55,7 +55,7 @@ p, li {
 }
 
 body {
-  height: 5000px;
+  /* height: 5000px; */
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-gap: 20px;
@@ -84,7 +84,7 @@ body {
 .main h1 {
   text-align: center;
   font-family: 'Oswald', sans-serif;
-  font-size: 5rem;
+  font-size: 10rem;
 }
 
 .inner-wrapper {
@@ -92,15 +92,6 @@ body {
   margin: 0 auto;
 }
 
-code {
-  background: lightgray;
-  padding: 20px;
-  text-align: center;
-  width: 100%;
-  display: block;
-  margin: 5px 0;
-}
-
-code span {
-  color: cornflowerblue;
+p {
+  line-height: 1.6;
 }
