@@ -1,10 +1,5 @@
-
-// Selecting the path element nested in the SVG returns a nodelist
-const path = document.querySelectorAll('.svg-path path');
-console.log(path);
-
 // Use the spread operator to convert the nodelist into an array
-const paths = [...document.querySelectorAll('.svg-path path')];
+const paths = document.querySelectorAll('path');
 console.log(paths);
 
 // For each path, do the following:
@@ -12,7 +7,7 @@ paths.forEach((path) => {
 
   // Create a variable for each path's length
   const length = path.getTotalLength();
-  // console.log(length);
+  console.log(length);
 
   // The stroke-dashoffset property defines the location along an SVG path where the dash of a stroke will begin. The higher the number, the further along the path the dashes will begin.
   path.style.strokeDashoffset = length;
@@ -21,7 +16,7 @@ paths.forEach((path) => {
   path.style.strokeDasharray = length;
 
   // The following function draws the dash
-  const myFunction = () => {
+  const drawPath = () => {
 
     // Variable to calculate the scroll percentage of the page
     const scrollPercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
@@ -39,5 +34,5 @@ paths.forEach((path) => {
   }
 
   // Event listener to draw
-  window.addEventListener('scroll', myFunction);
+  window.addEventListener('scroll', drawPath);
 });
