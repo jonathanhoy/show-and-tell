@@ -13,19 +13,24 @@ html {
 
 h1, h2 {
   font-family: 'Oswald', sans-serif;
-  font-size: 6rem;
   color: #333333;
+}
+
+h1 {
+  text-align: center;
+  font-size: 10rem;
 }
 
 h2 {
   font-size: 4rem;
 }
 
-p, li {
+p, li, a {
   font-family: 'Montserrat', sans-serif;
   font-size: 3rem;
   line-height: 1.6;
   color: #333333;
+  text-decoration: none;
 }
 
 p {
@@ -55,11 +60,6 @@ body {
 
 .main {
   grid-column: 2 / 3;
-}
-.main h1 {
-  text-align: center;
-  font-family: 'Oswald', sans-serif;
-  font-size: 10rem;
 }
 
 .inner-wrapper {
